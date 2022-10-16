@@ -13,6 +13,11 @@ git clear 清除页面所有代码
 
 //跟踪新文件和提交更新
 git commit -m "提交的备注信息"  // 提交更新到仓库
+git commit -a -m "提交的备注信息"  //直接提交到仓库 不经过缓存区
 
 //撤销对文件的修改，还原成git仓库中保存的版本
 git checkout -- index.html //命令。撤销对index.html文件的修改
+
+//从暂存区中移出对应的文件，可以用如下命令
+git reset HEAD 要移出的文件名称
+gir reset HEAD . 移出所有在缓存区的文件
