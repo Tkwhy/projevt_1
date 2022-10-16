@@ -8,7 +8,11 @@ git status  //获取文件状态
 git init // 初始化 在工作路径上创建主分支
 git add 文件名 // 将某个文件存入暂存区
 git add b c //把b和c存入暂存区
+git add .  //一次性将所有的新增和修改过的文件加入暂存区：
 git clear 清除页面所有代码
 
 //跟踪新文件和提交更新
 git commit -m "提交的备注信息"  // 提交更新到仓库
+
+//撤销对文件的修改，还原成git仓库中保存的版本
+git checkout -- index.html //命令。撤销对index.html文件的修改
