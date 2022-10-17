@@ -18,15 +18,28 @@ git commit -a -m "提交的备注信息"  //直接提交到仓库 不经过缓�
 //撤销对文件的修改，还原成git仓库中保存的版本
 git checkout -- index.html //命令。撤销对index.html文件的修改
 
-//从暂存区中移出对应的文件，可以用如下命令
+//从暂存区中移出对应的文件，可以用如下命令  
 git reset HEAD 要移出的文件名称
 git reset HEAD . 移出所有在缓存区的文件
+
+//切换版本
+git reset --hard <Commit ID>根据指定提交的ID回退到指定版本
+git reflog --pretty=oneline  在旧版本中使用命令，可以查看命令操作的历史
+git reset --hard <Commit ID> 再次根据最新的提交id ，跳转到最新的版本
  
 //从git仓库中移出文件有两种方式
 //1、从git仓库和工作区中同时移除对应文件
 git rm -f 要移出文件的名字
 //2、只从git仓库中移出指定的文件 ， 但保留工作区中对应的文件
 git rm --cached 要移除文件的名字
+
+//查看提交历史
+git log  按时间顺序 列出所有的提交历史 ，最新的排在最上面   按Q 退出查看
+git log -2 只展示最近的两条提交历史   数字可以按需填写
+git log -2 --pretty=oneline  在一行上显示最近两条提交历史信息
+git log --pretty=oneline  在一行上展示所有的提交历史
+
+//github 远程仓库
 
 //忽略文件
 一般我们总会有一些文件不需要纳入git的管理 也不希望他们总出现在跟踪文件列表。在这种情况下，
